@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 @main
 struct MyMoviesApp: App {
@@ -6,5 +7,6 @@ struct MyMoviesApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [Movie.self, SearchEvent.self])
     }
 }

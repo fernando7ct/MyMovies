@@ -6,7 +6,12 @@ struct DiscoverScreen: View {
             ScrollView(.vertical) {
                 
             }
-            .navigationTitle("Discover")
+            .overlay(alignment: .topLeading) {
+                Text("Discover")
+                    .padding()
+                    .font(.largeTitle)
+                    .bold()
+            }
         }
     }
 }

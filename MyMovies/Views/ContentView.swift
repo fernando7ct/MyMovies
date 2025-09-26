@@ -2,8 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var activeTab: Tabs = .library
-    @State private var searchText: String = ""
-    
+
     var body: some View {
         TabView(selection: $activeTab) {
             Tab(Tabs.library.title, systemImage: Tabs.library.icon, value: .library) {
@@ -19,7 +18,6 @@ struct ContentView: View {
             }
         }
         .tabBarMinimizeBehavior(.onScrollDown)
-        .searchable(text: $searchText, prompt: "Search for movie")
     }
 }
 
